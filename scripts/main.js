@@ -12,7 +12,7 @@ var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 
 function setUserName(){
-	var myname = prompt('你的名字是: ');
+	var myname = prompt('输入你的名字，然后重新刷新一下页面试试');
 	localStorage.setItem('name', myname);
 	myHeading.innerHTML = 'Hello , ' + myName;
 	
