@@ -1,16 +1,10 @@
-
-function multiply(num1,num2){
-	var result = num1 * num2;
-	return result
-}
-
 var myImage = document.querySelector('img');
 myImage.onclick = function(){
 	var mySrc = myImage.getAttribute('src');
-	if(mySrc === 'images/gamersky-wallpic.jpg'){
-		myImage.setAttribute('src','images/pic2.jpg');
+	if(mySrc === 'images/pic1.jpg'){
+		myImage.setAttribute('src','images/pic-cou.jpg');
 	}else{
-		myImage.setAttribute('src','images/gamersky-wallpic.jpg');
+		myImage.setAttribute('src','images/pic1.jpg');
 	}
 }
 
@@ -18,9 +12,9 @@ var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 
 function setUserName(){
-	var myname = prompt('Please enter your name: ');
+	var myname = prompt('你的名字是: ');
 	localStorage.setItem('name', myname);
-	myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+	myHeading.innerHTML = 'Hello , ' + myName;
 	
 }
 
@@ -28,9 +22,9 @@ if(!localStorage.getItem('name')){
 	setUserName();
 	}else{
 	var storedName = localStorage.getItem('name');
-	myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+	myHeading.innerHTML = 'Hello , ' + storedName;
 	}
-	
+
 myButton.onclick = function(){
 		setUserName();
 	}
